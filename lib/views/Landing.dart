@@ -28,7 +28,7 @@ class _LandingScreenState extends State<LandingScreen> {
   }
 
   void _navigateToHomeScreen() async {
-    await Future.delayed(Duration(seconds: 9));
+    await Future.delayed(Duration(seconds: 8));
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => HomeScreen()),

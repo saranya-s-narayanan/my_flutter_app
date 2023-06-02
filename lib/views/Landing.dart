@@ -8,6 +8,7 @@ void main() {
     ),
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
+    //locale: const Locale('es'), // uncomment this line to test multi language support
     home: LandingScreen(),
   ));
 }
@@ -23,17 +24,11 @@ class _LandingScreenState extends State<LandingScreen> {
   @override
   void initState() {
     super.initState();
-    _changeLanguage(Locale('es'));
     _navigateToHomeScreen();
   }
-  void _changeLanguage(Locale locale) {
-    Locale _locale = Locale('en');
-    setState(() {
-      _locale = locale;
-    });
-  }
+
   void _navigateToHomeScreen() async {
-    await Future.delayed(Duration(seconds: 900));
+    await Future.delayed(Duration(seconds: 9));
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => HomeScreen()),

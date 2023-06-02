@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/views/HomeScreen.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 void main() {
   runApp(MaterialApp(
+    theme: ThemeData(
+      fontFamily: 'Roboto',
+    ),
+    localizationsDelegates: AppLocalizations.localizationsDelegates,
+    supportedLocales: AppLocalizations.supportedLocales,
     home: LandingScreen(),
   ));
 }
@@ -12,13 +17,21 @@ class LandingScreen extends StatefulWidget {
   _LandingScreenState createState() => _LandingScreenState();
 }
 
+
+
 class _LandingScreenState extends State<LandingScreen> {
   @override
   void initState() {
     super.initState();
+    _changeLanguage(Locale('es'));
     _navigateToHomeScreen();
   }
-
+  void _changeLanguage(Locale locale) {
+    Locale _locale = Locale('en');
+    setState(() {
+      _locale = locale;
+    });
+  }
   void _navigateToHomeScreen() async {
     await Future.delayed(Duration(seconds: 900));
     Navigator.pushReplacement(
@@ -42,22 +55,20 @@ class _LandingScreenState extends State<LandingScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'EcoAware',
+                AppLocalizations.of(context)!.helloWorld,
                 style: TextStyle(
                   fontSize:36,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'Roboto',
                 ),
               ),
               SizedBox(height: 10), // Adds a 10 pixel vertical space between the two Text widgets
               Text(
-                'A personal guide in combating climate change!',
+                'Welcome to flutter app!',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
-                  fontFamily: 'Roboto',
                   fontStyle: FontStyle.italic,
                 ),
               ),

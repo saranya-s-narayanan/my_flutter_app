@@ -1,5 +1,6 @@
 {
-  "helloWorld": "Hello World!",
+  "my_flutter_app": "My flutter app",
+  "welcome": "Welcome to my flutter app!",
   "@helloWorld": {
     "description": "The conventional newborn programmer greeting"
   }

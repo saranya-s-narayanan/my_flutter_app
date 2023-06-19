@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "970603076200",
+    "firebase_url": "https://sampleapp-afd2a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "sampleapp-afd2a",
+    "storage_bucket": "sampleapp-afd2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970603076200:android:0d8d1bbf49d787a9ee79dd",
+        "android_client_info": {
+          "package_name": "com.example.my_flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970603076200-52scqudgjn2pjj07b3a6e6jja4urpkq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj8GqwsXOkejcHAb0jYw4koByqMoWBtI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970603076200-52scqudgjn2pjj07b3a6e6jja4urpkq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

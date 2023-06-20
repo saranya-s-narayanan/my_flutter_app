@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/views/ExploreInfo.dart';
+import 'package:my_flutter_app/views/ExploreScreen.dart';
 import 'package:my_flutter_app/views/HomeScreen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'dart:developer' as developer;
@@ -17,7 +18,7 @@ void main() {
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
     locale: const Locale('es'), // uncomment this line to test multi language support
-    home: LandingScreen(),
+    home: ExploreScreen(),
   ));
 }
 
@@ -66,6 +67,8 @@ class _LandingScreenState extends State<LandingScreen> {
 
   void printFirebase(){
     developer.log('printFirebase', name: 'my flutter app');
+
+    FirebaseDatabase.instance.setPersistenceEnabled(true);
 
     DatabaseReference ref = FirebaseDatabase.instance.reference();
 
